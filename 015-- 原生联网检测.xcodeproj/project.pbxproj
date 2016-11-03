@@ -14,6 +14,8 @@
 		0441F14B1DBF01A00097DCBF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0441F14A1DBF01A00097DCBF /* Assets.xcassets */; };
 		0441F14E1DBF01A00097DCBF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0441F14C1DBF01A00097DCBF /* LaunchScreen.storyboard */; };
 		0441F1591DBF01A00097DCBF /* _15_________UITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0441F1581DBF01A00097DCBF /* _15_________UITests.m */; };
+		0441F1641DBF07550097DCBF /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0441F1631DBF07550097DCBF /* SystemConfiguration.framework */; };
+		5C3440AD19DB43B87F94793F /* libPods-015-- 原生联网检测.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 73C5EAEE489451C9753660A7 /* libPods-015-- 原生联网检测.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +42,10 @@
 		0441F1541DBF01A00097DCBF /* 015-- 原生联网检测UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "015-- 原生联网检测UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0441F1581DBF01A00097DCBF /* _15_________UITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "_15_________UITests.m"; sourceTree = "<group>"; };
 		0441F15A1DBF01A00097DCBF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0441F1631DBF07550097DCBF /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		73C5EAEE489451C9753660A7 /* libPods-015-- 原生联网检测.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-015-- 原生联网检测.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		77E87C0AFED83A9D77B4D09D /* Pods-015-- 原生联网检测.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-015-- 原生联网检测.debug.xcconfig"; path = "Pods/Target Support Files/Pods-015-- 原生联网检测/Pods-015-- 原生联网检测.debug.xcconfig"; sourceTree = "<group>"; };
+		F92E1ADB33E27512F5F2E8D7 /* Pods-015-- 原生联网检测.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-015-- 原生联网检测.release.xcconfig"; path = "Pods/Target Support Files/Pods-015-- 原生联网检测/Pods-015-- 原生联网检测.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +53,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0441F1641DBF07550097DCBF /* SystemConfiguration.framework in Frameworks */,
+				5C3440AD19DB43B87F94793F /* libPods-015-- 原生联网检测.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -66,6 +74,8 @@
 				0441F13D1DBF01A00097DCBF /* 015-- 原生联网检测 */,
 				0441F1571DBF01A00097DCBF /* 015-- 原生联网检测UITests */,
 				0441F13C1DBF01A00097DCBF /* Products */,
+				6EF73CB61BF28829F643C256 /* Pods */,
+				B32661788178EA549A0641D7 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -111,6 +121,24 @@
 			path = "015-- 原生联网检测UITests";
 			sourceTree = "<group>";
 		};
+		6EF73CB61BF28829F643C256 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				77E87C0AFED83A9D77B4D09D /* Pods-015-- 原生联网检测.debug.xcconfig */,
+				F92E1ADB33E27512F5F2E8D7 /* Pods-015-- 原生联网检测.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		B32661788178EA549A0641D7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0441F1631DBF07550097DCBF /* SystemConfiguration.framework */,
+				73C5EAEE489451C9753660A7 /* libPods-015-- 原生联网检测.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -118,9 +146,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0441F15D1DBF01A00097DCBF /* Build configuration list for PBXNativeTarget "015-- 原生联网检测" */;
 			buildPhases = (
+				CA87D17C0552A80A8FCDA47E /* [CP] Check Pods Manifest.lock */,
 				0441F1371DBF01A00097DCBF /* Sources */,
 				0441F1381DBF01A00097DCBF /* Frameworks */,
 				0441F1391DBF01A00097DCBF /* Resources */,
+				9EB52CC9FC2014ED28932990 /* [CP] Embed Pods Frameworks */,
+				E18AD2A1387264F5C060632D /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -160,6 +191,7 @@
 				TargetAttributes = {
 					0441F13A1DBF01A00097DCBF = {
 						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = YF5P95RLXZ;
 						ProvisioningStyle = Automatic;
 					};
 					0441F1531DBF01A00097DCBF = {
@@ -207,6 +239,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		9EB52CC9FC2014ED28932990 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-015-- 原生联网检测/Pods-015-- 原生联网检测-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CA87D17C0552A80A8FCDA47E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		E18AD2A1387264F5C060632D /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-015-- 原生联网检测/Pods-015-- 原生联网检测-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		0441F1371DBF01A00097DCBF /* Sources */ = {
@@ -347,8 +427,10 @@
 		};
 		0441F15E1DBF01A00097DCBF /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 77E87C0AFED83A9D77B4D09D /* Pods-015-- 原生联网检测.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = YF5P95RLXZ;
 				INFOPLIST_FILE = "015-- 原生联网检测/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "guxuefei.-15---------";
@@ -358,8 +440,10 @@
 		};
 		0441F15F1DBF01A00097DCBF /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F92E1ADB33E27512F5F2E8D7 /* Pods-015-- 原生联网检测.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = YF5P95RLXZ;
 				INFOPLIST_FILE = "015-- 原生联网检测/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "guxuefei.-15---------";
@@ -408,6 +492,7 @@
 				0441F15F1DBF01A00097DCBF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0441F1601DBF01A00097DCBF /* Build configuration list for PBXNativeTarget "015-- 原生联网检测UITests" */ = {
 			isa = XCConfigurationList;
@@ -416,6 +501,7 @@
 				0441F1621DBF01A00097DCBF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

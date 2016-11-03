@@ -7,8 +7,11 @@
 //
 
 #import "AppDelegate.h"
+#import <Reachability.h>
 
 @interface AppDelegate ()
+
+@property (nonatomic, strong) Reachability *hostReach;
 
 @end
 
@@ -16,8 +19,61 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    
+    //开启网络状况的监听
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(reachabilityChanged:) name:kReachabilityChangedNotification object:nil];
+    
+    self.hostReach = [Reachability reachabilityWithHostName:@"www.baidu.com"] ;
+    
+    //开始监听，会启动一个run loop
+    
+    [self.hostReach startNotifier];
+    
     return YES;
+}
+
+- (void)reachabilityChanged:(NSNotification *)noti {
+    
+    Reachability *reachability = [noti object];
+    
+//    if ([reachability isKindOfClass:[reachability class]]) {
+//        
+//        NSLog(@"%zd", [reachability currentReachabilityStatus]);
+//        
+//        NetworkStatus status = [reachability currentReachabilityStatus];
+//        
+//        if (status == NotReachable) {
+//            NSLog(@"弹出提示框");
+//        } else if (status == ReachableViaWiFi) {
+//            NSLog(@"wifi环境，可以放心使用");
+//        } else {
+//            NSLog(@"蜂窝移动网络，当心流量超额");
+//        }
+//        
+//    }
+    
+    
+    // 或者通过BOOL值直接判断
+    if(![reachability isReachable])
+    {
+        NSLog(@"网络不可用");
+        return;
+    }
+    
+    if (reachability.isReachableViaWiFi) {
+        NSLog(@"当前通过wifi连接");
+        
+    } else {
+//        NSLog(@"wifi未开启，谨慎使用");
+    }
+    
+    if (reachability.isReachableViaWWAN) {
+        NSLog(@"当前通过2g or 3g连接");
+    } else {
+//        NSLog(@"2g or 3g网络未使用");
+    }
+    
 }
 
 
